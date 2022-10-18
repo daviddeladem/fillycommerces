@@ -6,7 +6,7 @@
         <div class="container">
 
             <div class="row">
-                <aside class="col-md-3">
+                {{-- <aside class="col-md-3">
                     <nav class="card">
                         <ul class="menu-category">
                             <li><a href="{{ url('products') }}">Best clothes</a></li>
@@ -25,11 +25,25 @@
                             </li>
                         </ul>
                     </nav>
-                </aside> <!-- col.// -->
-                <div class="col-md-9">
-                    <article class="banner-wrap">
-                        <img src="{{ asset('assets/images/2.jpg') }}" class="w-100 rounded">
-                    </article>
+                </aside> <!-- col.// --> --}}
+                <div class="col-md-12">
+                    <div id="slider">
+                        <figure id="slidy">
+
+                            <img
+                                src="https://static.vecteezy.com/system/resources/previews/002/006/605/original/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-pink-backgroud-for-banner-market-ecommerce-free-vector.jpg" />
+                            <img
+                                src="https://static.vecteezy.com/system/resources/thumbnails/003/240/364/small/shopping-online-on-phone-paper-art-modern-pink-background-gifts-box-free-vector.jpg" />
+                            <img
+                                src="https://static.vecteezy.com/system/resources/thumbnails/004/299/815/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg" />
+                            <img
+                                src="https://static.vecteezy.com/system/resources/thumbnails/004/707/493/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg" />
+                            <img
+                                src="https://static.vecteezy.com/system/resources/thumbnails/004/299/835/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg" />
+                            <img
+                                src="https://static.vecteezy.com/system/resources/thumbnails/004/707/493/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg" />
+                        </figure>
+                    </div>
                 </div> <!-- col.// -->
             </div> <!-- row.// -->
         </div> <!-- container //  -->
