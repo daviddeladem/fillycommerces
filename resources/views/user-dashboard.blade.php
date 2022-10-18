@@ -1516,44 +1516,41 @@
                                                                 </button>
                                                             </div>
                                                             <form class="mt-3">
-                                                                <div class="form-container">
-                                                                    <div class="field-container">
-                                                                        <label for="name">Name</label>
+                                                                <div class="form-row">
+
+                                                                    <div class="input-group mb-3">
                                                                         <input id="name" maxlength="20"
-                                                                            type="text">
+                                                                            type="text" class="form-control"
+                                                                            placeholder="name on card">
                                                                     </div>
-                                                                    <div class="field-container">
-                                                                        <label for="cardnumber">Card Number</label><span
-                                                                            id="generatecard">generate random</span>
+                                                                    <div class="input-group mb-3">
                                                                         <input id="cardnumber" type="text"
-                                                                            pattern="[0-9]*" inputmode="numeric">
-                                                                        <svg id="ccicon" class="ccicon"
-                                                                            width="750" height="471"
-                                                                            viewBox="0 0 750 471" version="1.1"
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                            pattern="[0-9]*" inputmode="numeric"
+                                                                            class="form-control"
+                                                                            placeholder="Card Number">
 
-                                                                        </svg>
                                                                     </div>
-                                                                    <div class="field-container">
-                                                                        <label for="expirationdate">Expiration
-                                                                            (mm/yy)</label>
+                                                                    <div class="input-group mb-3">
                                                                         <input id="expirationdate" type="text"
-                                                                            pattern="[0-9]*" inputmode="numeric">
-                                                                    </div>
-                                                                    <div class="field-container">
-                                                                        <label for="securitycode">Security Code</label>
-                                                                        <input id="securitycode" type="text"
-                                                                            pattern="[0-9]*" inputmode="numeric">
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
+                                                                            pattern="[0-9]*" inputmode="numeric"
+                                                                            class="form-control"
+                                                                            placeholder="Expiry Date mm/yy">
 
+                                                                    </div>
+                                                                    <div class="input-group mb-3">
+                                                                        <input id="securitycode" type="text"
+                                                                            pattern="[0-9]*" inputmode="numeric"
+                                                                            class="form-control" placeholder="CCV">
+
+                                                                    </div>
+                                                                    <button class="btn btn-active">Add Card</button>
+                                                                </div>
+                                                        </div>
+                                                        </form>
                                                     </div>
+
                                                 </div>
                                             </div>
-
                                         </div>
 
                                     </div>
@@ -1565,175 +1562,176 @@
                         </div>
 
                     </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                        aria-labelledby="pills-profile-tab">
-                        <div class="row" id="navigation">
-                            <div class="col-md-2 tab" id="tab">
-                                <button class="tablinks" onclick="openedTab(event, 'Inbox')"
-                                    id="defaultOpened">Inbox</button>
-                                <button class="tablinks" onclick="openedTab(event, 'sent')">Sent</button>
-                                <button class="tablinks" onclick="openedTab(event, 'Deleted')">Deleted</button>
-                            </div>
 
-                            <div id="Inbox" class="tabcontent col-md-10">
-                                <nav>
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-all" type="button" role="tab"
-                                            aria-controls="nav-all" aria-selected="true">All</button>
-                                        <button class="nav-link" id="nav-unread-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-unread" type="button" role="tab"
-                                            aria-controls="nav-unread" aria-selected="false">Unread</button>
-                                    </div>
-                                </nav>
-                                <div class="tab-content" id="nav-tabContent">
-                                    <div class="tab-pane fade show active" id="nav-all" role="tabpanel"
-                                        aria-labelledby="nav-all-tab">
-                                        {{-- no order --}}
-                                        <div class="mx-auto w-70 mt-5 d-none">
-                                            <p class="text-center">You have no messages to display</p>
-                                        </div>
-                                        <div class="table-responsive">
-                                            <table class="table align-middle">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Ref</th>
-                                                        <th>From</th>
-                                                        <th>Subject</th>
-                                                        <th>Date</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Filly Commerce</td>
-                                                        <td>Welcome to Filly Commerce</td>
-                                                        <td>16 Sept 2022</td>
-                                                        <td><a href="#">Delete</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Filly Commerce</td>
-                                                        <td>Welcome to Filly Commerce</td>
-                                                        <td>16 Sept 2022</td>
-                                                        <td><a href="#">Delete</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="nav-unread" role="tabpanel"
-                                        aria-labelledby="nav-unread-tab">
-                                        {{-- no order --}}
-                                        <div class="mx-auto w-70 mt-5 d-none">
-                                            <p class="text-center">You have no messages to display</p>
-                                        </div>
-                                        <div class="table-responsive">
-                                            <table class="table align-middle">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Ref</th>
-                                                        <th>From</th>
-                                                        <th>Subject</th>
-                                                        <th>Date</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Filly Commerce</td>
-                                                        <td>Welcome to Filly Commerce</td>
-                                                        <td>16 Sept 2022</td>
-                                                        <td><a href="#">Delete</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Filly Commerce</td>
-                                                        <td>Welcome to Filly Commerce</td>
-                                                        <td>16 Sept 2022</td>
-                                                        <td><a href="#">Delete</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="sent" class="tabcontent">
-                                <div class="mx-auto w-70 mt-5 d-none">
-                                    <p class="text-center">You have no messages to display</p>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table align-middle">
-                                        <thead>
-                                            <tr>
-                                                <th>Ref</th>
-                                                <th>To</th>
-                                                <th>Subject</th>
-                                                <th>Date</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Filly Commerce</td>
-                                                <td>Welcome to Filly Commerce</td>
-                                                <td>16 Sept 2022</td>
-                                                <td><a href="#">Delete</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Filly Commerce</td>
-                                                <td>Welcome to Filly Commerce</td>
-                                                <td>16 Sept 2022</td>
-                                                <td><a href="#">Delete</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div id="Deleted" class="tabcontent">
-                                <div class="mx-auto w-70 mt-5 d-none">
-                                    <p class="text-center">You have no messages to display</p>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table align-middle">
-                                        <thead>
-                                            <tr>
-                                                <th>Ref</th>
-                                                <th>From/To</th>
-                                                <th>Subject</th>
-                                                <th>Date</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Filly Commerce</td>
-                                                <td>Welcome to Filly Commerce</td>
-                                                <td>16 Sept 2022</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Filly Commerce</td>
-                                                <td>Welcome to Filly Commerce</td>
-                                                <td>16 Sept 2022</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="row" id="navigation">
+                        <div class="col-md-2 tab" id="tab">
+                            <button class="tablinks" onclick="openedTab(event, 'Inbox')"
+                                id="defaultOpened">Inbox</button>
+                            <button class="tablinks" onclick="openedTab(event, 'sent')">Sent</button>
+                            <button class="tablinks" onclick="openedTab(event, 'Deleted')">Deleted</button>
                         </div>
+
+                        <div id="Inbox" class="tabcontent col-md-10">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-all" type="button" role="tab"
+                                        aria-controls="nav-all" aria-selected="true">All</button>
+                                    <button class="nav-link" id="nav-unread-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-unread" type="button" role="tab"
+                                        aria-controls="nav-unread" aria-selected="false">Unread</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-all" role="tabpanel"
+                                    aria-labelledby="nav-all-tab">
+                                    {{-- no order --}}
+                                    <div class="mx-auto w-70 mt-5 d-none">
+                                        <p class="text-center">You have no messages to display</p>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Ref</th>
+                                                    <th>From</th>
+                                                    <th>Subject</th>
+                                                    <th>Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Filly Commerce</td>
+                                                    <td>Welcome to Filly Commerce</td>
+                                                    <td>16 Sept 2022</td>
+                                                    <td><a href="#">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Filly Commerce</td>
+                                                    <td>Welcome to Filly Commerce</td>
+                                                    <td>16 Sept 2022</td>
+                                                    <td><a href="#">Delete</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-unread" role="tabpanel"
+                                    aria-labelledby="nav-unread-tab">
+                                    {{-- no order --}}
+                                    <div class="mx-auto w-70 mt-5 d-none">
+                                        <p class="text-center">You have no messages to display</p>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Ref</th>
+                                                    <th>From</th>
+                                                    <th>Subject</th>
+                                                    <th>Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Filly Commerce</td>
+                                                    <td>Welcome to Filly Commerce</td>
+                                                    <td>16 Sept 2022</td>
+                                                    <td><a href="#">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Filly Commerce</td>
+                                                    <td>Welcome to Filly Commerce</td>
+                                                    <td>16 Sept 2022</td>
+                                                    <td><a href="#">Delete</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sent" class="tabcontent">
+                            <div class="mx-auto w-70 mt-5 d-none">
+                                <p class="text-center">You have no messages to display</p>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>Ref</th>
+                                            <th>To</th>
+                                            <th>Subject</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Filly Commerce</td>
+                                            <td>Welcome to Filly Commerce</td>
+                                            <td>16 Sept 2022</td>
+                                            <td><a href="#">Delete</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Filly Commerce</td>
+                                            <td>Welcome to Filly Commerce</td>
+                                            <td>16 Sept 2022</td>
+                                            <td><a href="#">Delete</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="Deleted" class="tabcontent">
+                            <div class="mx-auto w-70 mt-5 d-none">
+                                <p class="text-center">You have no messages to display</p>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>Ref</th>
+                                            <th>From/To</th>
+                                            <th>Subject</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Filly Commerce</td>
+                                            <td>Welcome to Filly Commerce</td>
+                                            <td>16 Sept 2022</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Filly Commerce</td>
+                                            <td>Welcome to Filly Commerce</td>
+                                            <td>16 Sept 2022</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div> <!-- row.// -->
+            </div>
+        </div> <!-- row.// -->
 
         </div> <!-- container //  -->
     </section>
