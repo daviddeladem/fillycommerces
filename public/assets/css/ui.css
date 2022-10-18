@@ -1724,8 +1724,11 @@ a[class*=card]:hover .title {
     padding: 10px 10px;
     border-radius: 50%;
     z-index: 2;
+    font-size: 20;
 }
-
+.bx{
+    color: #000;
+}
 .return-icon{
     width: 20px;
 }
