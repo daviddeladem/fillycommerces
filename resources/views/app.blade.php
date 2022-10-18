@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-4">
-                        <img src={{ url('assets/images/logo.png') }} alt="" width="80">
+                        <img src={{ url('assets/images/logo.png') }} alt="" width="150">
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <form action="#" class="search">
@@ -260,8 +260,10 @@
             document.getElementById('returnDetails').classList.remove('d-none');
         }
 
+        document.getElementById("selling").addEventListener("click", showMore);
+
         function showMore() {
-            document.getElementById('selling').classList.remove('d-none');
+            document.getElementById('showMore').classList.remove('d-none');
         }
     </script>
     <script>
@@ -273,6 +275,24 @@
             .catch(error => {
                 console.error(error);
             });
+    </script>
+
+    <script>
+        function openTab(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("defaultOpen").click();
     </script>
 
 </body>
