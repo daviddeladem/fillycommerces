@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/user-dashboard', function () {
     return view('user-dashboard');
 });
+Route::get('/refund', function () {
+    return view('refund');
+});
 Route::get('/start-listing', function () {
     return view('start-listing');
 });
