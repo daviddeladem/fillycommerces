@@ -23,6 +23,36 @@ Route::get('/user-dashboard', function () {
 Route::get('/refund', function () {
     return view('refund');
 });
+Route::get('/place-order', function () {
+    return view('place-order');
+});
+Route::get('/track-order', function () {
+    return view('track-order');
+});
+Route::get('/order-cancellation', function () {
+    return view('order-cancellation');
+});
+Route::get('/returns-refunds', function () {
+    return view('returns-refunds');
+});
+Route::get('/payments-faqs', function () {
+    return view('payments-faqs');
+});
+Route::get('/apply-now', function () {
+    return view('apply-now');
+});
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+Route::get('/terms-of-use', function () {
+    return view('terms');
+});
+Route::get('/contact-us', function () {
+    return view('contact');
+});
+Route::get('/help-center', function () {
+    return view('help-center');
+});
 Route::get('/start-listing', function () {
     return view('start-listing');
 });
