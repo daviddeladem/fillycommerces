@@ -66,10 +66,19 @@
                                     data-bs-toggle="dropdown" aria-expanded="false"><img
                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUBJREFUSEvVlG1RQzEQRU8VAA4qgSoAHBQFgIOiAFAADhgc1AFFAUioA1oF7Vxmlwl5SfZNIT/Ir3aSt+fu3Y8Jnc+kc3zGAs6BO+DUBH0AD8AqEjgGcG/BS7EE0X31RAApfwW2wAJYAhvgGngCjoCLViYRQBacAZcWPFUqyDPwBkhI8UQAqZXK0rtj4NMyOukJkH2CHZRBd4u8yF5Y+e2/H035r4qstLu2qfuqTARKB03//2TQomFt3rfaVJ1xBcxNed4pqoVWhobvxWozgNUAskRDNB0pfw3clCwrAbxzFFtdI6+lVIrTo4xUE91r2nUGHZUD9NG7KQ8XWULzTlMms1RMDtBCU38390vFNh/KW1uEX89ygD9qDk8F4Nb+EJcDfLlpeeWeR/UuLr8csLMo0ZatwQbfHxooyub7/v8D9gzNRRmX6M9FAAAAAElFTkSuQmCC" /></a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="{{ url('authentication-signin') }}">Sign in</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="{{ url('authentication-signup') }}"> Register</a>
-                                    </li>
+                                    @auth
+                                        <li><a class="dropdown-item" href="{{ url('user-dashboard') }}">Dashboard</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="{{ url('user-profile') }}"> Profile</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="{{ url('logout') }}"> Logout</a>
+                                        </li>
+                                    @else
+                                        <li><a class="dropdown-item" href="{{ url('login') }}">Sign in</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="{{ url('register') }}"> Register</a>
+                                        </li>
+                                    @endauth
                                 </ul>
                             </div>
 
@@ -161,29 +170,29 @@
                         <h6 class="title">Company</h6>
                         <ul class="list-unstyled">
                             <li> <a href="#">About us</a></li>
-                            <li> <a href="#">Career</a></li>
+                            <li> <a href="{{ url('apply-now') }}">Career</a></li>
                             <li> <a href="#">Find a store</a></li>
-                            <li> <a href="#">Rules and terms</a></li>
-                            <li> <a href="#">Sitemap</a></li>
+                            <li> <a href="{{ url('terms-of-use') }}">Terms of use</a></li>
+                            <li> <a href="{{ url('privacy') }}">Privacy</a></li>
                         </ul>
                     </aside>
                     <aside class="col-md col-6">
                         <h6 class="title">Help</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#">Contact us</a></li>
-                            <li> <a href="#">Money refund</a></li>
-                            <li> <a href="#">Order status</a></li>
-                            <li> <a href="#">Shipping info</a></li>
-                            <li> <a href="#">Open dispute</a></li>
+                            <li> <a href="{{ url('contact-us') }}">Contact us</a></li>
+                            <li> <a href="{{ url('returns-refunds') }}">Money refund</a></li>
+                            <li> <a href="{{ url('track-order') }}">Order status</a></li>
+                            <li> <a href="{{ url('order-cancellation') }}">Shipping info</a></li>
+                            <li> <a href="{{ url('help-center') }}">Open dispute</a></li>
                         </ul>
                     </aside>
                     <aside class="col-md col-6">
                         <h6 class="title">Account</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#"> User Login </a></li>
-                            <li> <a href="#"> User register </a></li>
-                            <li> <a href="#"> Account Setting </a></li>
-                            <li> <a href="#"> My Orders </a></li>
+                            <li> <a href="{{ url('login') }}"> User Login </a></li>
+                            <li> <a href="{{ url('register') }}"> User register </a></li>
+                            <li> <a href="{{ url('user-dashboard') }}"> Account Setting </a></li>
+                            <li> <a href="{{ url('user-profile') }}"> My Orders </a></li>
                         </ul>
                     </aside>
                     <aside class="col-md">

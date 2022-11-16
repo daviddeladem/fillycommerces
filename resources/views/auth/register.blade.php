@@ -52,76 +52,88 @@
                                                     <i class=" mx-2 bx bxs-info-circle"></i><span>
                                             </div>
                                         </div>
-                                        <form class="row g-3" id="personal">
+                                        <form id="personal" method="POST" action="{{ url('register') }}">
+                                            @csrf
+                                            <div class="row g-3" id="part-1">
+                                                <div class="col-sm-6">
+                                                    <label for="inputFirstName" class="form-label">First Name</label>
+                                                    <input type="text" name="firstname" class="form-control"
+                                                        id="inputFirstName" placeholder="Jhon">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="inputLastName" class="form-label">Last Name</label>
+                                                    <input type="text" name="lastname" class="form-control"
+                                                        id="inputLastName" placeholder="Deo">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputEmailAddress" class="form-label">Email
+                                                        Address</label>
+                                                    <input type="email" name="email" class="form-control"
+                                                        id="inputEmailAddress" placeholder="example@user.com">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputChoosePassword" class="form-label">Password</label>
+                                                    <div class="input-group" id="show_hide_password">
+                                                        <input type="password" class="form-control border-end-0"
+                                                            id="inputChoosePassword" name="password"
+                                                            placeholder="Enter Password"> <a href="javascript:;"
+                                                            class="input-group-text bg-transparent"><i
+                                                                class='bx bx-hide'></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputChoosePassword" class="form-label">Confirm
+                                                        Password</label>
+                                                    <div class="input-group" id="show_hide_password">
+                                                        <input type="password" class="form-control border-end-0"
+                                                            id="inputChoosePassword" name="password_confirmation"
+                                                            placeholder="Enter Password"> <a href="javascript:;"
+                                                            class="input-group-text bg-transparent"><i
+                                                                class='bx bx-hide'></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="flexSwitchCheckChecked">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">I
+                                                            read
+                                                            and agree to Terms & Conditions</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="d-grid">
+                                                        <button id="create" onclick="proceedForm()" type="button"
+                                                            class="btn btn-primary">Create
+                                                            account</button>
+                                                        <p class="text-center mt-3">Or Sign up
+                                                            with</p>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center flex">
 
-                                            {{-- <section class="part-1" id="part-1"> --}}
-                                            <div class="col-sm-6">
-                                                <label for="inputFirstName" class="form-label">First Name</label>
-                                                <input type="text" name="firstname" class="form-control"
-                                                    id="inputFirstName" placeholder="Jhon">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="inputLastName" class="form-label">Last Name</label>
-                                                <input type="text" name="lastname" class="form-control"
-                                                    id="inputLastName" placeholder="Deo">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputEmailAddress" class="form-label">Email
-                                                    Address</label>
-                                                <input type="email" name="email" class="form-control"
-                                                    id="inputEmailAddress" placeholder="example@user.com">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputChoosePassword" class="form-label">Password</label>
-                                                <div class="input-group" id="show_hide_password">
-                                                    <input type="password" class="form-control border-end-0"
-                                                        id="inputChoosePassword" name="password"
-                                                        placeholder="Enter Password"> <a href="javascript:;"
-                                                        class="input-group-text bg-transparent"><i
-                                                            class='bx bx-hide'></i></a>
+                                                    <a class="btn shadow-sm btn-white" href="#"> <span
+                                                            class="d-flex justify-content-center align-items-center w-10">
+                                                            <img class="me-2" src="assets/images/icons/facebook.png"
+                                                                width="16" alt="Image Description">
+                                                            <span> Facebook</span>
+                                                        </span>
+                                                    </a>
+                                                    <a class="btn shadow-sm btn-white" href="#"> <span
+                                                            class="d-flex justify-content-center align-items-center w-10">
+                                                            <img class="me-2" src="assets/images/icons/search.svg"
+                                                                width="16" alt="Image Description">
+                                                            <span> Google</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="text-center">
+                                                    <p> <a href="{{ url('login') }}">I already have an
+                                                            account</a>
+                                                    </p>
                                                 </div>
                                             </div>
-                                            <div class="col-12">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="flexSwitchCheckChecked">
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">I
-                                                        read
-                                                        and agree to Terms & Conditions</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="d-grid">
-                                                    <button type="button" id="create"
-                                                        class="btn btn-primary">Create
-                                                        account</button>
-                                                    <p class="text-center mt-3">Or Sign up with</p>
-                                                </div>
-                                            </div>
-                                            <div class="text-center flex">
-
-                                                <a class="btn shadow-sm btn-white" href="#"> <span
-                                                        class="d-flex justify-content-center align-items-center w-10">
-                                                        <img class="me-2" src="assets/images/icons/facebook.png"
-                                                            width="16" alt="Image Description">
-                                                        <span> Facebook</span>
-                                                    </span>
-                                                </a>
-                                                <a class="btn shadow-sm btn-white" href="#"> <span
-                                                        class="d-flex justify-content-center align-items-center w-10">
-                                                        <img class="me-2" src="assets/images/icons/search.svg"
-                                                            width="16" alt="Image Description">
-                                                        <span> Google</span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="text-center">
-                                                <p> <a href="{{ url('authentication-signin') }}">I already have an
-                                                        account</a>
-                                                </p>
-                                            </div>
-                                            {{-- </section> --}}
-                                            <div class="part-2" id="part-2" style="display: none">
+                                            <div class="row g-3 part-2 mt-4" id="part-2" style="display: none">
                                                 <div class="col-12">
                                                     <label for="inputSelectCountry" class="form-label">Country</label>
                                                     <select class="form-select" id="inputSelectCountry"
@@ -412,9 +424,8 @@
                                                 <div class="col-sm-12">
                                                     <label for="additional_info" class="form-label">Additional
                                                         Info</label>
-                                                    <input type="text" name="ladditional_info"
-                                                        class="form-control" id="additional_info"
-                                                        placeholder="Additional Info (Optional)">
+                                                    <input type="text" name="additional_info" class="form-control"
+                                                        id="additional_info" placeholder="Additional Info (Optional)">
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <label for="state" class="form-label">State/Region</label>
@@ -792,6 +803,11 @@
                 }
             });
         });
+
+        function proceedForm() {
+            document.getElementById("part-1").style.display = 'none';
+            document.getElementById("part-2").style.display = 'block';
+        }
     </script>
     <!--app JS-->
     <script src="assets/js/app.js"></script>

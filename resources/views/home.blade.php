@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-md-3 accordion ">
                     <a href="{{ url('products') }}" class="icon icon-sm rounded-circle border"><i
-                            class="fa fa-shopping-cart"></i></a>
+                            class="fa fa-credit-card"></i></a>
                     <div class="accordion-text mx-3">
                         <h5 class="head-small">Secure Payment</h5>
                         <p class="text-small">100% secure payment. Get easy support anytime</p>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-md-3 accordion ">
                     <a href="{{ url('products') }}" class="icon icon-sm rounded-circle border"><i
-                            class="fa fa-shopping-cart"></i></a>
+                            class="fa fa-truck"></i></a>
                     <div class="accordion-text mx-3">
                         <h5 class="head-small">Return Policy</h5>
                         <p class="text-small">Return withing the days of receiving your order</p>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-md-3 accordion ">
                     <a href="{{ url('products') }}" class="icon icon-sm rounded-circle border"><i
-                            class="fa fa-shopping-cart"></i></a>
+                            class="fa fa-phone"></i></a>
                     <div class="accordion-text mx-3">
                         <h5 class="head-small">24/7 Online Support</h5>
                         <p class="text-small">Dedicated support anytime and anywhere</p>
