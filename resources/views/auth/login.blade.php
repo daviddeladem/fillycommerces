@@ -88,7 +88,7 @@
                                                 </a>
                                             </div>
                                             <div class="text-center">
-                                                <p> <a href="{{ url('authentication-signup') }}">I'm new to Filly
+                                                <p> <a href="{{ url('register') }}">I'm new to Filly
                                                         Commerce</a>
                                                 </p>
                                             </div>

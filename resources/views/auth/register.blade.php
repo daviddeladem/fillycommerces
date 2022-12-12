@@ -749,7 +749,7 @@
                                                 </div>
                                             </div>
                                             <div class="text-center">
-                                                <p> <a href="{{ url('authentication-signin') }}">I already have an
+                                                <p> <a href="{{ url('login') }}">I already have an
                                                         account</a>
                                                 </p>
                                             </div>
